@@ -1,0 +1,44 @@
+{
+  "name": "vue-lte-ui",
+  "version": "0.1.0",
+  "description": "The vue components wrapper for AdminLTE UI.",
+  "main": "index.js",
+  "scripts": {
+    "cleanlib": "node build/cleanlib.js",
+    "dev": "webpack-dev-server --config build/webpack.dev.conf.js --open --hot",
+    "build": "webpack --config build/webpack.prod.conf.js",
+    "publish": "npm run cleanlib && webpack --config build/webpack.lib.conf.js",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HstarComponents/vue-lte-ui.git"
+  },
+  "keywords": [
+    "Admin",
+    "AdminLTE",
+    "Vue",
+    "Vue2",
+    "Components"
+  ],
+  "author": "Jay.M.Hu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HstarComponents/vue-lte-ui/issues"
+  },
+  "homepage": "https://github.com/HstarComponents/vue-lte-ui#readme",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-latest": "^6.24.1",
+    "css-loader": "^0.28.4",
+    "shelljs": "^0.7.8",
+    "vue": "^2.4.2",
+    "vue-loader": "^12.2.2",
+    "vue-router": "^2.7.0",
+    "vue-template-compiler": "^2.4.2",
+    "webpack": "^3.3.0",
+    "webpack-dev-server": "^2.5.1",
+    "webpack-merge": "^4.1.0"
+  }
+}
