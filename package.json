@@ -2,7 +2,7 @@
   "name": "vue-lte-ui",
   "version": "0.1.0",
   "description": "The vue components wrapper for AdminLTE UI.",
-  "main": "index.js",
+  "main": "lib/vue-lte-ui.js",
   "scripts": {
     "cleanlib": "node build/cleanlib.js",
     "dev": "webpack-dev-server --config build/webpack.dev.conf.js --open --hot",
