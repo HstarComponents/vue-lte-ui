@@ -15,6 +15,23 @@
         这是Box Footer!
       </template>
     </lte-box>
+    <hr>
+    <label for="">Box Bg: <input type="text" v-model="infoBoxOpt.boxBg"></label>
+    <label for="">Icon: <input type="text" v-model="infoBoxOpt.icon"></label>
+    <label for="">Icon Bg: <input type="text" v-model="infoBoxOpt.iconBg"></label>
+    <hr>
+    <lte-info-box :icon="infoBoxOpt.icon" :icon-bg="infoBoxOpt.iconBg" :icon-bg-class="infoBoxOpt.iconBgClass" :box-bg="infoBoxOpt.boxBg" :box-bg-class="infoBoxOpt.boxBgClass">
+      <span class="info-box-text">Inventory</span>
+      <span class="info-box-number">5,200</span>
+
+      <div class="progress">
+        <div class="progress-bar" style="width: 50%"></div>
+      </div>
+      <span class="progress-description">
+                    50% Increase in 30 Days
+                  </span>
+    </lte-info-box>
+
   </div>
 </template>
 <script>
@@ -24,7 +41,14 @@
         boxOpt: {
           type: 'info',
           showHeaderBorder: true,
-          collapsed: true
+          collapsed: false
+        },
+        infoBoxOpt: {
+          boxBg: '',
+          boxBgClass: 'bg-green',
+          icon: 'fa fa-home',
+          iconBg: '',
+          iconBgClass: ''
         }
       };
     }
