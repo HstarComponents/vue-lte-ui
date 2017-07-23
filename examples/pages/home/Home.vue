@@ -20,7 +20,8 @@
     <label for="">Icon: <input type="text" v-model="infoBoxOpt.icon"></label>
     <label for="">Icon Bg: <input type="text" v-model="infoBoxOpt.iconBg"></label>
     <hr>
-    <lte-info-box :icon="infoBoxOpt.icon" :icon-bg="infoBoxOpt.iconBg" :icon-bg-class="infoBoxOpt.iconBgClass" :box-bg="infoBoxOpt.boxBg" :box-bg-class="infoBoxOpt.boxBgClass">
+    <lte-info-box :icon="infoBoxOpt.icon" :icon-bg="infoBoxOpt.iconBg" :icon-bg-class="infoBoxOpt.iconBgClass" :box-bg="infoBoxOpt.boxBg"
+      :box-bg-class="infoBoxOpt.boxBgClass">
       <span class="info-box-text">Inventory</span>
       <span class="info-box-number">5,200</span>
 
@@ -31,6 +32,13 @@
                     50% Increase in 30 Days
                   </span>
     </lte-info-box>
+    <lte-small-box :box-bg-class="'bg-aqua'" icon="fa fa-lock" @footer-click="footerClick">
+      <h3>150</h3>
+      <p>New Orders</p>
+      <template slot="box-footer">
+        More info <i class="fa fa-arrow-circle-right"></i>
+      </template>
+    </lte-small-box>
 
   </div>
 </template>
@@ -51,6 +59,11 @@
           iconBgClass: ''
         }
       };
+    },
+    methods: {
+      footerClick() {
+        alert('footer click');
+      }
     }
   };
 
