@@ -1,5 +1,15 @@
 <template>
   <div class="page-home">
+    <div class="row">
+      <div class="col-md-4">
+        <input type="number" v-model.number="pageState.totalCount">
+        <input type="number" v-model.number="pageState.value">
+        <lte-pagination :totalCount="pageState.totalCount" v-model="pageState.value"></lte-pagination>
+      </div>
+      <div class="col-md-4"></div>
+      <div class="col-md-4"></div>
+    </div>
+    <hr>
     <label for="">Type: <input type="text" v-model="boxOpt.type"></label>
     <label for="">Show Header Border: <input type="checkbox" v-model="boxOpt.showHeaderBorder"></label>
     <label for="">Collapsed: <input type="checkbox" v-model="boxOpt.collapsed"></label>
@@ -106,6 +116,10 @@
         pOpt: {
           v: 60,
           m: 100
+        },
+        pageState: {
+          totalCount: 100,
+          value: 1
         },
         boxOpt: {
           type: 'info',

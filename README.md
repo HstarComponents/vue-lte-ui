@@ -7,6 +7,8 @@ The vue components wrapper for AdminLTE UI .
 - [x] lte-info-box [Usage](src/components/info-box/README.md)
 - [x] lte-small-box [Usage](src/components/small-box/README.md)
 - [x] lte-alert [Usage](src/components/alert/README.md)
+- [x] lte-progress [Usage](src/components/progress/README.md)
+- [x] lte-pagination [Usage](src/components/pagination/README.md)
 
 # Directives
 
