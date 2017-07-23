@@ -10,7 +10,7 @@
     props: {
       type: { type: String, default: 'info' },
       calloutStyle: { type: Boolean, default: false },
-      showCloseBtn: { type: Boolean, default: false }
+      closable: { type: Boolean, default: false }
     },
     beforeDestroy() {
       this.$emit('close', true);

@@ -6,7 +6,7 @@
 | --- | --- | --- | --- | --- |
 | type | string | | 'info' | 设置alert类型，可选['info', 'warning', 'danger', 'success'] |
 | calloutStyle | boolean | | false | 设置是否使用callout风格（会有一个特别的左边线） |
-| showCloseBtn | boolean | | false | 是否显示关闭按钮 |
+| closable | boolean | | false | 是否可关闭（显示关闭按钮） |
 
 # Slots
 
