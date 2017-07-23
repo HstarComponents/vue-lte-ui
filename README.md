@@ -27,6 +27,7 @@ Vue.use(LTEUI);
 - [x] lte-pagination [Usage](src/components/pagination/README.md)
 - [x] lte-tabset/lte-tab-item [Usage](src/components/tabset/README.md)
 - [x] lte-modal [Usage](src/components/modal/README.md)
+- [x] lte-timeline/lte-timeline-item [Usage](src/components/timeline/README.md)
 
 # Directives
 
