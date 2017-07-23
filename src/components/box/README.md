@@ -2,7 +2,7 @@
 
 盒子/面板组件（Panel组件）
 
-# Props
+## Props
 
 | Name | Data Type |  Two-way | Default Value | Description |
 | --- | --- | --- | --- | --- |
@@ -12,7 +12,7 @@
 | showHeaderBorder | boolean | | true | 是否显示Header Border |
 | type | string | | 'default' | 设置Box的类型，影响box的顶部边框颜色，可选：['success', 'warning', 'danger', 'info', 'primary', 'default', 'solid'] |
 
-# Slots
+## Slots
 
 | Name | Description |
 | --- | --- |
@@ -21,7 +21,7 @@
 | box-tools | 设置Box组件，右上角的工具栏位 |
 | box-footer | 设置Box组件的Footer |
 
-# Events
+## Events
 
 | Name | Paramters | Description |
 | --- | --- | --- |

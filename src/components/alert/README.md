@@ -1,6 +1,6 @@
 # lte-alert
 
-# Props
+## Props
 
 | Name | Data Type |  Two-way | Default Value | Description |
 | --- | --- | --- | --- | --- |
@@ -8,7 +8,7 @@
 | calloutStyle | boolean | | false | 设置是否使用callout风格（会有一个特别的左边线） |
 | closable | boolean | | false | 是否可关闭（显示关闭按钮） |
 
-# Slots
+## Slots
 
 | Name | Description |
 | --- | --- |
@@ -16,7 +16,7 @@
 
 
 
-# Events
+## Events
 
 | Name | Paramters | Description |
 | --- | --- | --- |

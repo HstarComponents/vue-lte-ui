@@ -1,6 +1,6 @@
 # lte-progress
 
-# Props
+## Props
 
 | Name | Data Type |  Two-way | Default Value | Description |
 | --- | --- | --- | --- | --- |
@@ -14,12 +14,12 @@
 | totalCount | number | | 0 | 总记录数 |
 | value | number | Y | 1 | 当前页码，通过v-model绑定 |
 
-# Slots
+## Slots
 
 | Name | Description |
 | --- | --- |
 
-# Events
+## Events
 
 | Name | Paramters | Description |
 | --- | --- | --- |

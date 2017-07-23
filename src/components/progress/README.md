@@ -1,6 +1,6 @@
 # lte-progress
 
-# Props
+## Props
 
 | Name | Data Type |  Two-way | Default Value | Description |
 | --- | --- | --- | --- | --- |
@@ -13,12 +13,12 @@
 | value | number | Y | | 进度条的值（最终显示的比例为 value / max） |
 | text | string | | '' | 进度条显示的文本（在小号进度条上，文字会溢出） |
 
-# Slots
+## Slots
 
 | Name | Description |
 | --- | --- |
 
-# Events
+## Events
 
 | Name | Paramters | Description |
 | --- | --- | --- |
