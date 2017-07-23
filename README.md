@@ -1,6 +1,22 @@
 # vue-lte-ui
 The vue components wrapper for AdminLTE UI .
 
+# Usage
+
+```bash
+#  install
+npm i -S vue-lte-ui
+```
+
+```js
+// main.js
+import Vue from 'vue';
+import LTEUI from 'vue-lte-ui';
+
+Vue.use(LTEUI);
+```
+
+
 # Components
 
 - [x] lte-box(Panel) [Usage](src/components/box/README.md)

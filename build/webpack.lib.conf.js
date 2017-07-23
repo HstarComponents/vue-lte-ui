@@ -29,12 +29,12 @@ module.exports = webpackMerge(baseConfig, {
         LIB_VERSION: `'${require('../package.json').version}'`
       },
     }),
-    // new webpack.optimize.UglifyJsPlugin({
-    //   sourceMap: true,
-    //   compress: {
-    //     warnings: false
-    //   }
-    // }),
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
+      compress: {
+        warnings: false
+      }
+    }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
     })
