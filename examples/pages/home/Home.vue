@@ -1,6 +1,12 @@
 <template>
   <div class="page-home">
     <div class="row">
+      {{modalShown}}
+      <lte-modal v-model="modalShown" size="sm" width="1111">
+        Hello,你丫要干啥？
+      </lte-modal>
+    </div>
+    <div class="row">
       <div class="col-md-6">
         <lte-tabset v-model="xx" @tab-remove="tabRemove">
           <template slot="tabset-tools">
@@ -158,6 +164,7 @@
   export default {
     data() {
       return {
+        modalShown: true,
         xx: 't1',
         pOpt: {
           v: 60,

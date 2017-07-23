@@ -6,6 +6,7 @@ import progress from './progress/progress.vue';
 import pagination from './pagination/pagination.vue';
 import tabset from './tabset/tabset.vue';
 import tabItem from './tabset/tab-item.vue';
+import modal from './modal/modal.vue';
 
 export const COMPONENTS = [
   box,
@@ -14,5 +15,6 @@ export const COMPONENTS = [
   alert,
   progress,
   pagination,
-  tabset, tabItem
+  tabset, tabItem,
+  modal
 ];
