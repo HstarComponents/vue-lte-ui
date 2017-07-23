@@ -1,6 +1,6 @@
 # lte-box(Panel)
 
-Panel组件
+盒子/面板组件（Panel组件）
 
 # Props
 
@@ -9,7 +9,7 @@ Panel组件
 | header | string | | '' | 设置box的title属性（为了避免和html的title属性冲突，使用header属性） |
 | collapsed | boolean | | false | 设置box是否是collapsed（收缩） |
 | showHeaderBorder | boolean | | true | 是否显示Header Border |
-| type | string | | 'default' | 设置Box的类型，影响box的顶部边框颜色，可选：['success', 'warning', 'danger', 'info', 'primary', 'default'] |
+| type | string | | 'default' | 设置Box的类型，影响box的顶部边框颜色，可选：['success', 'warning', 'danger', 'info', 'primary', 'default', 'solid'] |
 
 # Slots
 
