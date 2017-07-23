@@ -7,6 +7,8 @@ import pagination from './pagination/pagination.vue';
 import tabset from './tabset/tabset.vue';
 import tabItem from './tabset/tab-item.vue';
 import modal from './modal/modal.vue';
+import timeline from './timeline/timeline.vue';
+import timelineItem from './timeline/timeline-item.vue';
 
 export const COMPONENTS = [
   box,
@@ -16,5 +18,6 @@ export const COMPONENTS = [
   progress,
   pagination,
   tabset, tabItem,
-  modal
+  modal,
+  timeline, timelineItem
 ];

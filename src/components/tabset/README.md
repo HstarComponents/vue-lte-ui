@@ -11,7 +11,7 @@
 
 | Name | Description |
 | --- | --- |
-| default | 设置small-box内容 |
+| default | 设置TabSet内容 |
 | tabset-tools | 设置tabset Header自定义内容 |
 
 
