@@ -5,7 +5,6 @@
   </div>
 </template>
 <script>
-  import Vue from 'vue';
   export default {
     name: 'lte-alert',
     props: {
