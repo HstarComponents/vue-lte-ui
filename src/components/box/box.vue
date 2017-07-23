@@ -3,7 +3,7 @@
     <div class="box-header" :class="{'with-border': showHeaderBorder}">
       <h3 class="box-title">
         <slot name="box-title">
-          {{header}}
+          <i v-if="!!icon" :class="icon"></i> {{header}}
         </slot>
       </h3>
       <div class="box-tools pull-right">
@@ -23,10 +23,11 @@
   export default {
     name: 'lte-box',
     props: {
+      type: { type: String, default: 'default' },
       header: { type: String, default: '' },
+      icon: { type: String },
       collapsed: { type: Boolean, default: false },
-      showHeaderBorder: { type: Boolean, default: true },
-      type: { type: String, default: 'default' }
+      showHeaderBorder: { type: Boolean, default: true }
     },
     computed: {
       boxType() {

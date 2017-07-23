@@ -7,6 +7,7 @@
 | Name | Data Type |  Two-way | Default Value | Description |
 | --- | --- | --- | --- | --- |
 | header | string | | '' | 设置box的title属性（为了避免和html的title属性冲突，使用header属性） |
+| icon | string | | | 设置标题的ICON图标，自定义了 `box-title slot`，该属性会无效 |
 | collapsed | boolean | | false | 设置box是否是collapsed（收缩） |
 | showHeaderBorder | boolean | | true | 是否显示Header Border |
 | type | string | | 'default' | 设置Box的类型，影响box的顶部边框颜色，可选：['success', 'warning', 'danger', 'info', 'primary', 'default', 'solid'] |

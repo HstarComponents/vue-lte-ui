@@ -4,8 +4,6 @@ import App from './App.vue';
 
 import LTEUI from '../src';
 
-console.log(LTEUI.version);
-
 Vue.use(LTEUI);
 
 new Vue({

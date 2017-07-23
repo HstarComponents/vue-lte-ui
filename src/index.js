@@ -1,4 +1,5 @@
 import { COMPONENTS } from './components';
+import { DIRECTIVES } from './directives';
 
 const install = Vue => {
   if (install.installed) return;
@@ -6,6 +7,11 @@ const install = Vue => {
   // Register components
   COMPONENTS.forEach(comp => {
     Vue.component(comp.name, comp);
+  });
+
+  // Register derectives
+  DIRECTIVES.forEach(directive => {
+    Vue.directive(directive.name, directive);
   });
 
   // Register services
