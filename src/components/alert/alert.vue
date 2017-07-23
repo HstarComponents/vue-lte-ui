@@ -1,6 +1,6 @@
 <template>
   <div class="lte-alert" :class="alertClass">
-    <button type="button" class="close" v-if="showCloseBtn" @click="closeBtnClick">×</button>
+    <button type="button" class="close" v-if="closable" @click="closeBtnClick">×</button>
     <slot></slot>
   </div>
 </template>

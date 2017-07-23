@@ -25,6 +25,7 @@ Vue.use(LTEUI);
 - [x] lte-alert [Usage](src/components/alert/README.md)
 - [x] lte-progress [Usage](src/components/progress/README.md)
 - [x] lte-pagination [Usage](src/components/pagination/README.md)
+- [x] lte-tabset/lte-tab-item [Usage](src/components/tabset/README.md)
 
 # Directives
 

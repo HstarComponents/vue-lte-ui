@@ -1,6 +1,51 @@
 <template>
   <div class="page-home">
     <div class="row">
+      <div class="col-md-6">
+        <lte-tabset v-model="xx" @tab-remove="tabRemove">
+          <template slot="tabset-tools">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                  Dropdown <span class="caret"></span>
+                </a>
+              <ul class="dropdown-menu">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                <li role="presentation" class="divider"></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+              </ul>
+            </li>
+          </template>
+          <lte-tab-item :header="xxxs" name="t1" icon="fa fa-home" closable>
+            AAA,Tab1
+          </lte-tab-item>
+          <lte-tab-item header="Tab2" name="t2" icon="fa fa-lock">
+            AAA,Tab2
+          </lte-tab-item>
+          <lte-tab-item header="Tab3" name="t3">
+            AAA,Tab3
+          </lte-tab-item>
+        </lte-tabset>
+      </div>
+      <div class="col-md-6">
+        <lte-tabset v-model="xx" direction="right">
+          <template slot="tabset-tools">
+            <li class="pull-left header"><i class="fa fa-th"></i> Custom Tabs</li>
+          </template>
+          <lte-tab-item :header="xxxs" name="t1" icon="fa fa-home">
+            AAA,Tab1
+          </lte-tab-item>
+          <lte-tab-item header="Tab2" name="t2" icon="fa fa-lock">
+            AAA,Tab2
+          </lte-tab-item>
+          <lte-tab-item header="Tab3" name="t3">
+            AAA,Tab3
+          </lte-tab-item>
+        </lte-tabset>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-md-4">
         <input type="number" v-model.number="pageState.totalCount">
         <input type="number" v-model.number="pageState.value">
@@ -113,6 +158,7 @@
   export default {
     data() {
       return {
+        xx: 't1',
         pOpt: {
           v: 60,
           m: 100
@@ -133,15 +179,20 @@
           iconBg: '',
           iconBgClass: ''
         },
-        xxx: '我是一个Tooltip'
+        xxx: '我是一个Tooltip',
+        xxxs: ''
       };
     },
     created() {
       setInterval(() => {
         this.xxx = Math.random();
-      }, 5000);
+        this.xxxs = String(this.xxx);
+      }, 2000);
     },
     methods: {
+      tabRemove(item) {
+        alert('remove' + item.name);
+      },
       footerClick() {
         alert('footer click');
       },

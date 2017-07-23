@@ -4,6 +4,8 @@ import smallBox from './small-box/small-box.vue';
 import alert from './alert/alert.vue';
 import progress from './progress/progress.vue';
 import pagination from './pagination/pagination.vue';
+import tabset from './tabset/tabset.vue';
+import tabItem from './tabset/tab-item.vue';
 
 export const COMPONENTS = [
   box,
@@ -11,5 +13,6 @@ export const COMPONENTS = [
   smallBox,
   alert,
   progress,
-  pagination
+  pagination,
+  tabset, tabItem
 ];
