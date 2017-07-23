@@ -22,5 +22,5 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export default {
   install,
-  version: require('package.json').version
+  version: process.env.LIB_VERSION
 };
