@@ -28,7 +28,7 @@ Vue.use(LTEUI);
 - [x] lte-tabset/lte-tab-item [Usage](src/components/tabset/README.md)
 - [x] lte-modal [Usage](src/components/modal/README.md)
 - [x] lte-timeline/lte-timeline-item [Usage](src/components/timeline/README.md)
-- [ ] lte-rating
+- [x] lte-rating [Usage](src/components/rating/README.md)
 - [ ] lte-multi-select
 - [ ] lte-input-mask
 - [ ] lte-checkbox

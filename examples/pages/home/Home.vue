@@ -1,6 +1,11 @@
 <template>
   <div class="page-home">
     <div class="row">
+      {{ratingValue}}
+      <br>
+      <lte-rating v-model="ratingValue" :readonly="true"></lte-rating>
+    </div>
+    <div class="row">
       <lte-timeline>
         <lte-timeline-item icon="fa fa-leaf">
           <span class="time"><i class="fa fa-clock-o"></i> 12:05</span>
@@ -183,6 +188,7 @@
   export default {
     data() {
       return {
+        ratingValue: 3,
         modalShown: true,
         xx: 't1',
         pOpt: {

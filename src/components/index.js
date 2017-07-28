@@ -9,6 +9,7 @@ import tabItem from './tabset/tab-item.vue';
 import modal from './modal/modal.vue';
 import timeline from './timeline/timeline.vue';
 import timelineItem from './timeline/timeline-item.vue';
+import rating from './rating/rating.vue';
 
 export const COMPONENTS = [
   box,
@@ -19,5 +20,6 @@ export const COMPONENTS = [
   pagination,
   tabset, tabItem,
   modal,
-  timeline, timelineItem
+  timeline, timelineItem,
+  rating
 ];
