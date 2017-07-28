@@ -7,7 +7,7 @@
     "cleanlib": "node build/cleanlib.js",
     "dev": "webpack-dev-server --config build/webpack.dev.conf.js --open --hot",
     "build": "webpack --config build/webpack.prod.conf.js",
-    "publish": "npm run cleanlib && webpack --config build/webpack.lib.conf.js",
+    "lib": "npm run cleanlib && webpack --config build/webpack.lib.conf.js",
     "test": "test"
   },
   "repository": {
