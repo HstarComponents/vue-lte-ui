@@ -36,6 +36,7 @@
     "font-awesome": "^4.7.0",
     "ionicons": "^3.0.0",
     "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
     "loglevel": "^1.4.1",
     "shelljs": "^0.7.8",
     "stylus": "^0.54.5",

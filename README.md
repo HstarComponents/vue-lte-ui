@@ -28,7 +28,28 @@ Vue.use(LTEUI);
 - [x] lte-tabset/lte-tab-item [Usage](src/components/tabset/README.md)
 - [x] lte-modal [Usage](src/components/modal/README.md)
 - [x] lte-timeline/lte-timeline-item [Usage](src/components/timeline/README.md)
+- [ ] lte-rating
+- [ ] lte-multi-select
+- [ ] lte-input-mask
+- [ ] lte-checkbox
+- [ ] lte-checkbox-group
+- [ ] lte-radio
+- [ ] lte-radio-group
+- [ ] lte-switch
+- [ ] lte-slider
+- [ ] lte-table
+- [ ] lte-tree
+- [ ] lte-treeview
+- [ ] lte-file-upload
+- [ ] lte-accordion
+- [ ] lte-datepicker
+- [ ] lte-tag
+- [ ] lte-tag-input
+- [ ] lte-carousel
+- [ ] lte-app-btn
+
 
 # Directives
 
 - [x] v-lte-tooltip
+- [ ] v-lte-poptip
