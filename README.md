@@ -43,8 +43,8 @@ Vue.use(LTEUI);
 - [ ] lte-file-upload
 - [ ] lte-accordion
 - [ ] lte-datepicker
-- [x] lte-tag
-- [x] lte-tag-input
+- [x] lte-tag [Usage](src/components/tag/README.md)
+- [x] lte-tag-input [Usage](src/components/tag-input/README.md)
 - [ ] lte-carousel
 - [ ] lte-app-btn
 
