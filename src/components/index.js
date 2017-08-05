@@ -10,6 +10,8 @@ import modal from './modal/modal.vue';
 import timeline from './timeline/timeline.vue';
 import timelineItem from './timeline/timeline-item.vue';
 import rating from './rating/rating.vue';
+import tag from './tag/tag.vue';
+import tagInput from './tag-input/tag-input.vue';
 
 export const COMPONENTS = [
   box,
@@ -21,5 +23,6 @@ export const COMPONENTS = [
   tabset, tabItem,
   modal,
   timeline, timelineItem,
-  rating
+  rating,
+  tag, tagInput
 ];
