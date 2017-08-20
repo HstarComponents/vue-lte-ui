@@ -119,14 +119,14 @@
         return html;
       },
       _loadDocument() {
-        axios.get(`http://localhost:8080/src/components/${this.componentName}/README.md`).then(res => {
+        axios.get(`${AppConf.rootHost}/src/components/${this.componentName}/README.md`).then(res => {
           let doc = res.data; this.document = doc;
         });
       },
       _loadDemo() {
-        axios.get(`http://localhost:8080/src/components/${this.componentName}/usage.html`)
+        axios.get(`${AppConf.rootHost}/src/components/${this.componentName}/usage.html`)
           .then(({ data }) => { this.demoHtmlCode = data; });
-        axios.get(`http://localhost:8080/src/components/${this.componentName}/usage.js`)
+        axios.get(`${AppConf.rootHost}/src/components/${this.componentName}/usage.js`)
           .then(({ data }) => { this.demoJsCode = data; })
       }
     }

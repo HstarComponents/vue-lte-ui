@@ -1,4 +1,5 @@
 window.AppConf = {
+  rootHost: 'http://localhost:8080',
   menus: [
     { path: '/', icon: 'fa fa-dashboard text-maroon', text: 'Dashboard' },
     {

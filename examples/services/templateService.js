@@ -3,13 +3,12 @@ const baseTemplate = `
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Bootstrap 3.3.7 -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <!-- Theme style -->
-    <link rel="stylesheet" href="static/AdminLTE/css/AdminLTE.min.css">
-    <!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="static/AdminLTE/css/skins/_all-skins.min.css">
+    <link href="//cdn.bootcss.com/admin-lte/2.3.11/css/AdminLTE.min.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/admin-lte/2.3.11/css/skins/_all-skins.min.css" rel="stylesheet">
     <style>
       body {
         padding: 20px;
