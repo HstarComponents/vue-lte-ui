@@ -6,7 +6,7 @@
     name: 'live-code-box',
     props: {
       code: { type: String, default: '' },
-      defaultCode: { type: String, default: 'Hello, World!' }
+      defaultCode: { type: String, default: '' }
     },
     mounted() {
       this.runCode();

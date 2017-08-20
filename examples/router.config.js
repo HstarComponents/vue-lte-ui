@@ -3,11 +3,12 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 import {
-  Home
+  Home,
+  DemoContainer
 } from './pages';
 
 const routes = [
-  { path: '', component: Home }
+  { path: '', component: DemoContainer }
 ];
 
 export const router = new VueRouter({

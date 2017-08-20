@@ -1,4 +1,7 @@
 <style lang="stylus">
+  .lte-tabset{
+    margin-bottom: 0;
+  }
   .lte-tabset .fa.fa-close {
     margin-left: 5px;
     width: 16px;

@@ -4,6 +4,7 @@
       <div class="col-md-6">
         <md-dob-box :markdown="'# XXXXXX'"></md-dob-box>
         <live-code-box :code="'xxx'"></live-code-box>
+        <monaco-editor height="500px;"></monaco-editor>
       </div>
       <div class="col-md-6">
         <div class="row">

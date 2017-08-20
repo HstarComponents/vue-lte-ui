@@ -11,6 +11,8 @@ COMPONENTS.forEach(c => {
 });
 
 import 'lodash';
+import axios from 'axios';
+window.axios = axios;
 import './config.js';
 
 new Vue({

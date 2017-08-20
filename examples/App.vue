@@ -17,6 +17,15 @@
       font-size: 14px;
     }
   }
+
+  .content {
+    position: fixed;
+    top: 87px;
+    right: 0;
+    bottom: 0;
+    left: 230px;
+    overflow-y: auto;
+  }
 </style>
 <template>
   <div id="app">
