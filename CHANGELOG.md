@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 0.3.0 (2017-08-05)
+
+- 新增基础组件rating、tag、tag-input
+
 ## 0.2.0 (2017-07-28)
 
 - 调整alert可关闭属性（showCloseBtn => closable）

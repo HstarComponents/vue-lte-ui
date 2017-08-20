@@ -7,6 +7,19 @@
       </div>
       <div class="col-md-6">
         <div class="row">
+          <div class="col-xs-6">
+            <lte-tag>Hello</lte-tag>
+            <lte-tag type="danger">Hello</lte-tag>
+            <lte-tag badge bg-class="bg-green">Hello</lte-tag>
+            <lte-tag badge bg-color="#abc">Hello</lte-tag>
+            <lte-tag bg-color="orange">Hello</lte-tag>
+          </div>
+          <div class="col-xs-6">
+            {{tagInputValues}}
+            <lte-tag-input v-model="tagInputValues"></lte-tag-input>
+          </div>
+        </div>
+        <div class="row">
           {{ratingValue}}
           <br>
           <lte-rating v-model="ratingValue" :readonly="true"></lte-rating>
@@ -196,8 +209,9 @@
   export default {
     data() {
       return {
+        tagInputValues: ['xxxx', 'bbbb'],
         ratingValue: 3,
-        modalShown: true,
+        modalShown: false,
         xx: 't1',
         pOpt: {
           v: 60,
