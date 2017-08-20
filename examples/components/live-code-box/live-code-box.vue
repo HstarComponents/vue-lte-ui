@@ -20,7 +20,7 @@
     },
     methods: {
       runCode() {
-        let iframeHtml = `<iframe id="previewFrame" frameborder="0" style="width: 100%;height: 100%;" border="0" marginwidth="0" marginheight="0" scrolling="yes" allowtransparency="yes"></iframe>`;
+        let iframeHtml = `<iframe id="previewFrame" frameborder="0" style="width: 100%; height: 100%;" border="0" marginwidth="0" marginheight="0" scrolling="yes" allowtransparency="yes"></iframe>`;
         this.$el.innerHTML = iframeHtml;
         // 抓出iframe元素
         let iframe = this.$el.querySelector('#previewFrame');

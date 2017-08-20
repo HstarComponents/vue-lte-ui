@@ -2,6 +2,7 @@
   .full-height {
     height: 100%;
   }
+
   .page-demo-container {
     .half-height {
       height: 50%;
@@ -40,7 +41,7 @@
         </div>
       </div>
       <div class="col-xs-6 full-height left-border preview-container">
-        <live-code-box :code="liveHtml"></live-code-box>
+        <live-code-box :code="liveHtml" :style="iframeStyle"></live-code-box>
       </div>
     </div>
   </div>
@@ -57,7 +58,10 @@
         demoHtmlCode: '',
         demoJsCode: '',
         editorHeight: 100,
-        componentName: 'box'
+        componentName: 'box',
+        iframeStyle: {
+          height: '400px'
+        }
       };
     },
     created() {
@@ -71,9 +75,11 @@
       this.loadComponentDemoAndDocument();
       this.liveHtml = this._buildHtmlForPreview();
       window.addEventListener('resize', this._setEditorHeight, false);
+      window.addEventListener('message', this.processIframeHeightChange, false);
     },
     beforeDestroy() {
       window.removeEventListener('resize', this._setEditorHeight);
+      window.removeEventListener('message', this.processIframeHeightChange);
     },
     watch: {
       demoHtmlCode() {
@@ -84,6 +90,12 @@
       }
     },
     methods: {
+      processIframeHeightChange(evt) {
+        let data = evt.data;
+        if (data && data.event === 'iframeHeightChange') {
+          this.iframeStyle.height = data.data + 'px';
+        }
+      },
       processRouteChange(path) {
         let arr = path.split('/');
         this.componentName = arr.pop();
