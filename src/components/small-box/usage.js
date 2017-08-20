@@ -12,5 +12,9 @@ new Vue({
   watch: {
 
   },
-  methods: {}
+  methods: {
+    footerClick() {
+      alert('您点击了footer');
+    }
+  }
 });

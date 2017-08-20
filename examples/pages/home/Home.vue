@@ -143,16 +143,6 @@
                           </span>
             </lte-info-box>
           </div>
-          <div class="col-md-4">
-            <lte-small-box :box-bg-class="'bg-aqua'" icon="fa fa-lock" @footer-click="footerClick">
-              <h3>150</h3>
-              <p>New Orders</p>
-              <template slot="box-footer">
-                More info <i class="fa fa-arrow-circle-right"></i>
-              </template>
-            </lte-small-box>
-          </div>
-          <div class="col-md-4"></div>
         </div>
         <hr>
         <span v-lte-tooltip="xxx">鼠标放上来就会出现ToolTip</span>
@@ -173,30 +163,7 @@
             </lte-alert>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-4">
-            <input type="number" v-model.number="pOpt.v">
-            <lte-progress :value="pOpt.v" :max="pOpt.m" :text="pOpt.v.toString()" :active="true" :striped="true"></lte-progress>
-            <lte-progress :value="pOpt.v" :max="pOpt.m" :text="pOpt.v.toString()" size="sm" type="success" :active="true" :striped="true"></lte-progress>
-            <lte-progress :value="pOpt.v" :max="pOpt.m" :text="pOpt.v.toString()" size="xs" type="warning" :striped="true"></lte-progress>
-            <lte-progress :value="pOpt.v" :max="pOpt.m" :text="pOpt.v.toString()" size="xxs" type="danger" :striped="true"></lte-progress>
-          </div>
-          <div class="col-md-4">
-            <lte-progress :value="pOpt.v" :max="pOpt.m" :text="pOpt.v.toString()" :active="true"></lte-progress>
-            <lte-progress :value="pOpt.v" :max="pOpt.m" type="success" :active="true"></lte-progress>
-            <lte-progress :value="pOpt.v" :max="pOpt.m" type="warning"></lte-progress>
-            <lte-progress :value="pOpt.v" :max="pOpt.m" type="danger"></lte-progress>
-          </div>
-          <div class="col-md-4">
-            <lte-progress :value="pOpt.v" :max="pOpt.m" :vertical="true"></lte-progress>
-            <lte-progress :value="pOpt.v" :max="pOpt.m" type="success" :vertical="true"></lte-progress>
-            <lte-progress :value="pOpt.v" :max="pOpt.m" type="warning" :vertical="true"></lte-progress>
-            <lte-progress :value="pOpt.v" :max="pOpt.m" type="danger" :vertical="true"></lte-progress>
-            <lte-progress :value="pOpt.v" :max="pOpt.m" type="success" size="sm" :vertical="true"></lte-progress>
-            <lte-progress :value="pOpt.v" :max="pOpt.m" type="warning" size="xs" :vertical="true"></lte-progress>
-            <lte-progress :value="pOpt.v" :max="pOpt.m" type="danger" size="xxs" :vertical="true"></lte-progress>
-          </div>
-        </div>
+
       </div>
     </div>
   </div>
@@ -209,10 +176,6 @@
         ratingValue: 3,
         modalShown: false,
         xx: 't1',
-        pOpt: {
-          v: 60,
-          m: 100
-        },
         pageState: {
           totalCount: 100,
           value: 1

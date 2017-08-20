@@ -1,0 +1,19 @@
+<div class="demo-page">
+  <div class="row">
+    <div class="col-xs-6">
+      <lte-small-box :box-bg-class="'bg-aqua'" icon="fa fa-lock" @footer-click="footerClick">
+        <h3>150</h3>
+        <p>New Orders</p>
+      </lte-small-box>
+    </div>
+    <div class="col-xs-6">
+      <lte-small-box :box-bg-class="'bg-aqua'" icon="fa fa-lock" @footer-click="footerClick">
+        <h3>150</h3>
+        <p>带Footer的small-box</p>
+        <template slot="box-footer">
+          点我触发<i>footer-click</i> event<i class="fa fa-arrow-circle-right"></i>
+        </template>
+      </lte-small-box>
+    </div>
+  </div>
+</div>

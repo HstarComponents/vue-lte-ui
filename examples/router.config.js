@@ -8,6 +8,7 @@ import {
 } from './pages';
 
 const routes = [
+  { path: '/', component: Home },
   { path: '*', component: DemoContainer }
 ];
 

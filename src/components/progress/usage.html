@@ -1,3 +1,26 @@
 <div class="demo-page">
-
+  <div class="row">
+    <div class="col-xs-6">
+      <input type="number" v-model.number="pOpt.v">
+      <lte-progress :value="pOpt.v" :max="pOpt.m" :text="pOpt.v.toString()" :active="true" :striped="true"></lte-progress>
+      <lte-progress :value="pOpt.v" :max="pOpt.m" :text="pOpt.v.toString()" size="sm" type="success" :active="true" :striped="true"></lte-progress>
+      <lte-progress :value="pOpt.v" :max="pOpt.m" :text="pOpt.v.toString()" size="xs" type="warning" :striped="true"></lte-progress>
+      <lte-progress :value="pOpt.v" :max="pOpt.m" :text="pOpt.v.toString()" size="xxs" type="danger" :striped="true"></lte-progress>
+    </div>
+    <div class="col-xs-6">
+      <lte-progress :value="pOpt.v" :max="pOpt.m" :text="pOpt.v.toString()" :active="true"></lte-progress>
+      <lte-progress :value="pOpt.v" :max="pOpt.m" type="success" :active="true"></lte-progress>
+      <lte-progress :value="pOpt.v" :max="pOpt.m" type="warning"></lte-progress>
+      <lte-progress :value="pOpt.v" :max="pOpt.m" type="danger"></lte-progress>
+    </div>
+    <div class="col-xs-6">
+      <lte-progress :value="pOpt.v" :max="pOpt.m" :vertical="true"></lte-progress>
+      <lte-progress :value="pOpt.v" :max="pOpt.m" type="success" :vertical="true"></lte-progress>
+      <lte-progress :value="pOpt.v" :max="pOpt.m" type="warning" :vertical="true"></lte-progress>
+      <lte-progress :value="pOpt.v" :max="pOpt.m" type="danger" :vertical="true"></lte-progress>
+      <lte-progress :value="pOpt.v" :max="pOpt.m" type="success" size="sm" :vertical="true"></lte-progress>
+      <lte-progress :value="pOpt.v" :max="pOpt.m" type="warning" size="xs" :vertical="true"></lte-progress>
+      <lte-progress :value="pOpt.v" :max="pOpt.m" type="danger" size="xxs" :vertical="true"></lte-progress>
+    </div>
+  </div>
 </div>
