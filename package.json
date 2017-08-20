@@ -8,6 +8,7 @@
     "dev": "webpack-dev-server --config build/webpack.dev.conf.js --open --hot",
     "build": "webpack --config build/webpack.prod.conf.js",
     "lib": "npm run cleanlib && webpack --config build/webpack.lib.conf.js",
+    "docs": "gulp4 docs",
     "test": "test"
   },
   "repository": {
@@ -33,6 +34,7 @@
     "babel-loader": "^7.1.1",
     "babel-preset-latest": "^6.24.1",
     "css-loader": "^0.28.4",
+    "gulp4": "^4.0.2",
     "lodash": "^4.17.4",
     "loglevel": "^1.4.1",
     "shelljs": "^0.7.8",
