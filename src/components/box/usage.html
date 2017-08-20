@@ -1,4 +1,30 @@
 <div class="demo-page">
-  <h1>lte-box Demo</h1>
-  <lte-box></lte-box>
+  <lte-box header="简易盒子">这是盒子内容</lte-box>
+  <lte-box type="success" header="success盒子">这是盒子内容</lte-box>
+  <lte-box type="warning" header="warning盒子">这是盒子内容</lte-box>
+  <lte-box type="danger" header="danger盒子">这是盒子内容</lte-box>
+  <lte-box type="info" header="info盒子">这是盒子内容</lte-box>
+  <lte-box type="primary" header="primary盒子">这是盒子内容</lte-box>
+  <lte-box type="solid" header="solid盒子">这是盒子内容</lte-box>
+  <lte-box header="带ICON的盒子" icon="fa fa-lock">这是盒子内容</lte-box>
+  <lte-box :collapsed="true" header="我处于收缩状态">这是盒子内容</lte-box>
+  <lte-box :show-header-border="false" header="不显示Header边框线">这是盒子内容</lte-box>
+  <lte-box header="有solt box-title时，header属性失效">
+    <template slot="box-title">
+      <h1>我是slot title，允许HTML</h1>
+    </template>
+    内容在这里
+  </lte-box>
+  <lte-box header="自定义工具栏">
+    <template slot="box-tools">
+      <button class="btn btn-default btn-xs">工具按钮1</button>
+    </template>
+    内容在这里
+  </lte-box>
+  <lte-box header="自定义Footer">
+    内容在这里
+    <template slot="box-footer">
+      <button class="btn btn-primary">保存</button>
+    </template>
+  </lte-box>
 </div>

@@ -60,12 +60,12 @@
         editorHeight: 100,
         componentName: 'box',
         iframeStyle: {
-          height: '400px'
-        }
+          height: 'calc(100vh - 117px)'
+        },
+        previewTimerId: null
       };
     },
     created() {
-      this.updateLiveHtml = _.debounce(this.updateLiveHtml, 500);
       eventBus.on('route-change', path => {
         this.processRouteChange(path);
       });
@@ -75,11 +75,9 @@
       this.loadComponentDemoAndDocument();
       this.liveHtml = this._buildHtmlForPreview();
       window.addEventListener('resize', this._setEditorHeight, false);
-      window.addEventListener('message', this.processIframeHeightChange, false);
     },
     beforeDestroy() {
       window.removeEventListener('resize', this._setEditorHeight);
-      window.removeEventListener('message', this.processIframeHeightChange);
     },
     watch: {
       demoHtmlCode() {
@@ -90,19 +88,16 @@
       }
     },
     methods: {
-      processIframeHeightChange(evt) {
-        let data = evt.data;
-        if (data && data.event === 'iframeHeightChange') {
-          this.iframeStyle.height = data.data + 'px';
-        }
-      },
       processRouteChange(path) {
         let arr = path.split('/');
         this.componentName = arr.pop();
         this.loadComponentDemoAndDocument();
       },
       updateLiveHtml() {
-        this.liveHtml = this._buildHtmlForPreview();
+        clearTimeout(this.previewTimerId);
+        this.previewTimerId = setTimeout(() => {
+          this.liveHtml = this._buildHtmlForPreview();
+        }, 500);
       },
       loadComponentDemoAndDocument() {
         this._loadDocument();

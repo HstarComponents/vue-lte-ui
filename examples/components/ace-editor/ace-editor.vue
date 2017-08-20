@@ -93,6 +93,7 @@
     },
     beforeDestroy() {
       this.editor.destroy();
+      this.editor = null;
     },
     methods: {
       beautifyCode(val) {

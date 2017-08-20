@@ -20,21 +20,6 @@ const baseTemplate = `
   <script src="//cdn.bootcss.com/vue/2.4.2/vue.js"></script>
   <script src="/lib/vue-lte-ui.js"></script>
   <script>
-    var current_height = document.body.scrollHeight;
-    function sendMsg(){
-      parent.postMessage({event: 'iframeHeightChange', data: current_height }, '*');
-    }
-    setInterval(function(){
-      var h = document.body.scrollHeight;
-      if(h !== current_height){
-        current_height = h;
-        sendMsg();
-      }
-    }, 300);
-    console.log(current_height, 'out');
-    sendMsg();
-  </script>
-  <script>
     {{jsCode}}
   </script>
   </body>
