@@ -91,7 +91,9 @@
       processRouteChange(path) {
         let arr = path.split('/');
         this.componentName = arr.pop();
-        this.loadComponentDemoAndDocument();
+        if (this.componentName) {
+          this.loadComponentDemoAndDocument();
+        }
       },
       updateLiveHtml() {
         clearTimeout(this.previewTimerId);
@@ -126,7 +128,7 @@
           });
         axios.get(`${AppConf.rootHost}/src/components/${this.componentName}/usage.js`)
           .then(({ data }) => { this.demoJsCode = data; })
-          .catch(()=>{
+          .catch(() => {
             this.demoJsCode = `console.log('加载组件[${this.componentName}]示例失败')`;
           });
       }
