@@ -90,6 +90,7 @@
   </div>
 </template>
 <script>
+  import { eventBus } from './services/eventBus';
   export default {
     data() {
       return {
@@ -104,6 +105,7 @@
     },
     watch: {
       $route(r) {
+        eventBus.emit('route-change', r.path);
         this._setBreadcrumb(r.path);
       }
     },

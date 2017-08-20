@@ -2,12 +2,10 @@
   .full-height {
     height: 100%;
   }
-
   .page-demo-container {
     .half-height {
       height: 50%;
     }
-    .top-part {}
     .left-border {
       border-left: 1px solid #ccc;
     }
@@ -48,7 +46,7 @@
   </div>
 </template>
 <script>
-  import { templateService } from '../../services/templateService.js';
+  import { templateService, eventBus } from '../../services';
   export default {
     data() {
       return {
@@ -58,21 +56,19 @@
         document: '# Welcome!',
         demoHtmlCode: '',
         demoJsCode: '',
-        editorHeight: 100
+        editorHeight: 100,
+        componentName: 'box'
       };
-    },
-    watch: {
-      $route(newVal) {
-        console.log(newVal);
-      }
     },
     created() {
       this.updateLiveHtml = _.debounce(this.updateLiveHtml, 500);
+      eventBus.on('route-change', path => {
+        this.processRouteChange(path);
+      });
+      this.processRouteChange(this.$route.path);
     },
     mounted() {
-      this._loadDocument();
-      this._loadDemo();
-      this._setEditorHeight();
+      this.loadComponentDemoAndDocument();
       this.liveHtml = this._buildHtmlForPreview();
       window.addEventListener('resize', this._setEditorHeight, false);
     },
@@ -88,8 +84,18 @@
       }
     },
     methods: {
+      processRouteChange(path) {
+        let arr = path.split('/');
+        this.componentName = arr.pop();
+        this.loadComponentDemoAndDocument();
+      },
       updateLiveHtml() {
         this.liveHtml = this._buildHtmlForPreview();
+      },
+      loadComponentDemoAndDocument() {
+        this._loadDocument();
+        this._loadDemo();
+        this._setEditorHeight();
       },
       _setEditorHeight() {
         this.$nextTick(() => {
@@ -98,18 +104,17 @@
       },
       _buildHtmlForPreview() {
         let html = templateService.buildHtmlForPreview(this.demoHtmlCode, this.demoJsCode);
-        console.log(html);
         return html;
       },
       _loadDocument() {
-        axios.get('http://localhost:8080/src/components/box/README.md').then(res => {
+        axios.get(`http://localhost:8080/src/components/${this.componentName}/README.md`).then(res => {
           let doc = res.data; this.document = doc;
         });
       },
       _loadDemo() {
-        axios.get('http://localhost:8080/src/components/box/usage.html')
+        axios.get(`http://localhost:8080/src/components/${this.componentName}/usage.html`)
           .then(({ data }) => { this.demoHtmlCode = data; });
-        axios.get('http://localhost:8080/src/components/box/usage.js')
+        axios.get(`http://localhost:8080/src/components/${this.componentName}/usage.js`)
           .then(({ data }) => { this.demoJsCode = data; })
       }
     }

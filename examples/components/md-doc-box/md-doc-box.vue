@@ -28,10 +28,13 @@
           return console.error('md-doc-box component depend marked(https://github.com/chjj/marked).');
         }
         let htmlCode = window.marked(this.markdown);
+        htmlCode = htmlCode.replace(/<table>/g, '<table class="table table-bordered">');
         this.$el.innerHTML = htmlCode;
       },
       _setMarkedOptions() {
-        window.marked && marked.setOptions(this.options);
+        if (window.marked) {
+          marked.setOptions(this.options);
+        }
       }
     }
   };

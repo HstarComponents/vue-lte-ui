@@ -8,10 +8,15 @@ import {
 } from './pages';
 
 const routes = [
-  { path: '', component: DemoContainer }
+  { path: '*', component: DemoContainer }
 ];
 
 export const router = new VueRouter({
   mode: 'hash',
   routes
+});
+
+router.beforeEach((to, from, next) => {
+  console.log('to', to, 'from', from);
+  next();
 });

@@ -2,11 +2,6 @@
   <div class="page-home">
     <div class="row">
       <div class="col-md-6">
-        <md-dob-box :markdown="'# XXXXXX'"></md-dob-box>
-        <live-code-box :code="'xxx'"></live-code-box>
-        <monaco-editor height="500px;"></monaco-editor>
-      </div>
-      <div class="col-md-6">
         <div class="row">
           <div class="col-xs-6">
             <lte-tag>Hello</lte-tag>
@@ -239,10 +234,6 @@
       };
     },
     created() {
-      setInterval(() => {
-        this.xxx = Math.random();
-        this.xxxs = String(this.xxx);
-      }, 2000);
     },
     methods: {
       tabRemove(item) {
