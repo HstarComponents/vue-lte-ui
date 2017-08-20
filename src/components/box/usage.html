@@ -1,14 +1,44 @@
 <div class="demo-page">
-  <lte-box header="简易盒子">这是盒子内容</lte-box>
-  <lte-box type="success" header="success盒子">这是盒子内容</lte-box>
-  <lte-box type="warning" header="warning盒子">这是盒子内容</lte-box>
-  <lte-box type="danger" header="danger盒子">这是盒子内容</lte-box>
-  <lte-box type="info" header="info盒子">这是盒子内容</lte-box>
-  <lte-box type="primary" header="primary盒子">这是盒子内容</lte-box>
-  <lte-box type="solid" header="solid盒子">这是盒子内容</lte-box>
-  <lte-box header="带ICON的盒子" icon="fa fa-lock">这是盒子内容</lte-box>
-  <lte-box :collapsed="true" header="我处于收缩状态">这是盒子内容</lte-box>
-  <lte-box :show-header-border="false" header="不显示Header边框线">这是盒子内容</lte-box>
+  <div class="row">
+    <div class="col-xs-6">
+      <lte-box header="简易盒子">这是盒子内容</lte-box>
+    </div>
+    <div class="col-xs-6">
+      <lte-box type="success" header="success盒子">这是盒子内容</lte-box>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6">
+      <lte-box type="warning" header="warning盒子">这是盒子内容</lte-box>
+    </div>
+    <div class="col-xs-6">
+      <lte-box type="danger" header="danger盒子">这是盒子内容</lte-box>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6">
+      <lte-box type="info" header="info盒子">这是盒子内容</lte-box>
+    </div>
+    <div class="col-xs-6">
+      <lte-box type="primary" header="primary盒子">这是盒子内容</lte-box>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6">
+      <lte-box type="solid" header="solid盒子">这是盒子内容</lte-box>
+    </div>
+    <div class="col-xs-6">
+      <lte-box header="带ICON的盒子" icon="fa fa-lock">这是盒子内容</lte-box>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6">
+      <lte-box :collapsed="true" header="我处于收缩状态">这是盒子内容</lte-box>
+    </div>
+    <div class="col-xs-6">
+      <lte-box :show-header-border="false" header="不显示Header边框线">这是盒子内容</lte-box>
+    </div>
+  </div>
   <lte-box header="有solt box-title时，header属性失效">
     <template slot="box-title">
       <h1>我是slot title，允许HTML</h1>
