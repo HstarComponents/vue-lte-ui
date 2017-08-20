@@ -17,6 +17,6 @@ gulp.task('docs', done => {
   let buildContent = fs.readFileSync('dist/build.js', 'utf8');
   buildContent = buildContent.replace('rootHost:"http://localhost:8080"', 'rootHost:"https://raw.githubusercontent.com/HstarComponents/vue-lte-ui/master"')
     .replace('<base href="/">', '<base href="/vue-lte-ui/">');
-  fs.writeFileSync('dist/build.js', buildContent);
+  fs.writeFileSync('docs/build.js', buildContent);
   done();
 });
