@@ -26,6 +26,16 @@
     left: 230px;
     overflow-y: auto;
   }
+  .navbar-nav>.user-menu>.dropdown-menu{
+    width: 500px;
+  }
+  .navbar-nav>.user-menu>.dropdown-menu>li.user-header{
+    height: auto;
+  }
+  .navbar-nav>.user-menu>.dropdown-menu>li.user-header>img{
+    width: calc(50% - 3px);
+    height: auto;
+  }
 </style>
 <template>
   <div id="app">
@@ -38,6 +48,28 @@
             <b>Admin</b> LTE</span>
         </a>
         <nav class="navbar navbar-static-top">
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="https://github.com/HstarComponents/vue-lte-ui" target="_blank">
+                  <i class="fa fa-github"></i>
+                  Github 仓库
+                </a>
+              </li>
+              <li class="dropdown user user-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                    <span class="hidden-xs"><i class="fa fa-money"></i> 打赏我</span>
+                  </a>
+                <ul class="dropdown-menu">
+                  <!-- User image -->
+                  <li class="user-header">
+                    <img src="http://mock.hstar.org/static/img/alipay.ddb0b8b.jpg" alt="Alipay">
+                    <img src="http://mock.hstar.org/static/img/wechat.151fc01.png" alt="Wepay">
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </nav>
       </header>
       <aside class="main-sidebar">
