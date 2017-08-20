@@ -120,9 +120,15 @@
       },
       _loadDemo() {
         axios.get(`${AppConf.rootHost}/src/components/${this.componentName}/usage.html`)
-          .then(({ data }) => { this.demoHtmlCode = data; });
+          .then(({ data }) => { this.demoHtmlCode = data; })
+          .catch(() => {
+            this.demoHtmlCode = `<h1>加载组件[${this.componentName}]示例失败</h1>`;
+          });
         axios.get(`${AppConf.rootHost}/src/components/${this.componentName}/usage.js`)
           .then(({ data }) => { this.demoJsCode = data; })
+          .catch(()=>{
+            this.demoJsCode = `console.log('加载组件[${this.componentName}]示例失败')`;
+          });
       }
     }
   };
