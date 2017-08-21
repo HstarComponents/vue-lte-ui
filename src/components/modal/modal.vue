@@ -1,5 +1,5 @@
 <template>
-  <div class="modal fade in" style="padding-right: 17px;" :class="['modal-' + type]" :style="{display: innerValue ? 'block': 'none'}">
+  <div class="modal fade in" style="padding-right: 17px; display:none;" :class="['modal-' + type]" :style="{display: innerValue ? 'block': 'none'}">
     <div class="modal-dialog" :class="modalSizeClass" :style="modalStyle">
       <div class="modal-content">
         <div class="modal-header">
@@ -44,7 +44,7 @@
     },
     computed: {
       modalSizeClass() {
-        return this.size ? ['modal-' + this.size] : null;
+        return this.size ? ['modal-' + this.size] : [];
       },
       modalStyle() {
         return this.width ? { width: this.width + 'px' } : null;
