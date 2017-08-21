@@ -1,0 +1,42 @@
+<div class="demo-page">
+  <lte-tabset v-model="selectedTab" @tab-remove="tabRemove">
+    <template slot="tabset-tools">
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                Dropdown <span class="caret"></span>
+              </a>
+        <ul class="dropdown-menu">
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+          <li role="presentation" class="divider"></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+        </ul>
+      </li>
+    </template>
+    <lte-tab-item header="Tab1" name="t1" icon="fa fa-home" closable>
+      AAA,Tab1
+    </lte-tab-item>
+    <lte-tab-item header="Tab2" name="t2" icon="fa fa-lock">
+      AAA,Tab2
+    </lte-tab-item>
+    <lte-tab-item header="Tab3" name="t3">
+      AAA,Tab3
+    </lte-tab-item>
+  </lte-tabset>
+  <hr>
+  <lte-tabset v-model="selectedTab" direction="right">
+    <template slot="tabset-tools">
+      <li class="pull-left header"><i class="fa fa-th"></i> Custom Tabs</li>
+    </template>
+    <lte-tab-item header="Tab1" name="t1" icon="fa fa-home">
+      AAA,Tab1
+    </lte-tab-item>
+    <lte-tab-item header="Tab2" name="t2" icon="fa fa-lock">
+      AAA,Tab2
+    </lte-tab-item>
+    <lte-tab-item header="Tab3" name="t3">
+      AAA,Tab3
+    </lte-tab-item>
+  </lte-tabset>
+</div>

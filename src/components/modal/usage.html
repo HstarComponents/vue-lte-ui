@@ -1,3 +1,28 @@
 <div class="demo-page">
-
+  <button class="btn btn-primary" @click="showModal('modal1')">显示Modal</button>
+  <button class="btn btn-primary" @click="showModal('modal2')">显示小型Modal</button>
+  <button class="btn btn-primary" @click="showModal('modal3')">自定义宽度</button>
+  <button class="btn btn-primary" @click="showModal('modal4')">禁用右上角关闭</button>
+  <button class="btn btn-primary" @click="showModal('modal5')">自定义底部操作按钮</button>
+  <button class="btn btn-primary" @click="showModal('modal6')">不同的类型</button>
+  <lte-modal v-model="modal1" header="弹出层">
+    Hello,你丫要干啥？
+  </lte-modal>
+  <lte-modal v-model="modal2" size="sm">
+    Hello,你丫要干啥？
+  </lte-modal>
+  <lte-modal v-model="modal3" width="300">
+    Hello,你丫要干啥？
+  </lte-modal>
+  <lte-modal v-model="modal4" :closable="false">
+    Hello,你丫要干啥？
+  </lte-modal>
+  <lte-modal v-model="modal5">
+    <template slot="modal-footer">
+      我是自定义底部按钮，只支持右上角关闭。
+    </template>
+  </lte-modal>
+  <lte-modal v-model="modal6" type="danger" header="鲜艳的弹出层">
+    Hello,你丫要干啥？
+  </lte-modal>
 </div>

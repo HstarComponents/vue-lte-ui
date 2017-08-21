@@ -1,3 +1,14 @@
 <div class="demo-page">
-
+  总记录数：<input type="number" v-model.number="pageState.totalCount">
+  <br>
+  总页数:<input type="number" v-model.number="pageState.value">
+  <br>
+  <br>
+  <lte-pagination :total-count="pageState.totalCount" v-model="pageState.value"></lte-pagination>
+  <br>
+  <lte-pagination size="sm" :total-count="pageState.totalCount" v-model="pageState.value"></lte-pagination>
+  <br>
+  <lte-pagination size="lg" :total-count="pageState.totalCount" v-model="pageState.value"></lte-pagination>
+  <br>
+  <lte-pagination  first-text="" last-text="" :total-count="pageState.totalCount" v-model="pageState.value"></lte-pagination>
 </div>

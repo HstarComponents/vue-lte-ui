@@ -5,4 +5,14 @@
   <lte-alert type="success">成功类型的Alert</lte-alert>
   <lte-alert :calloutStyle="true">别理我</lte-alert>
   <lte-alert :closable="true" @close="onClose">允许关闭</lte-alert>
+  <lte-alert :show-close-btn="true" @close="alertClose">
+    <h4><i class="icon fa fa-ban"></i> Alert!</h4>
+    Danger alert preview. This alert is dismissable. A wonderful serenity has taken possession of my entire soul, like these
+    sweet mornings of spring which I enjoy with my whole heart.
+  </lte-alert>
+  <lte-alert :calloutStyle="true" type="danger">
+    <h4><i class="icon fa fa-ban"></i> Alert!</h4>
+    Danger alert preview. This alert is dismissable. A wonderful serenity has taken possession of my entire soul, like these
+    sweet mornings of spring which I enjoy with my whole heart.
+  </lte-alert>
 </div>

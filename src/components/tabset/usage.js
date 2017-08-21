@@ -1,5 +1,8 @@
 new Vue({
   el: document.querySelector('.demo-page'),
+  data:{
+    selectedTab: 't1'
+  },
   created() {
 
   },
@@ -12,5 +15,9 @@ new Vue({
   watch: {
 
   },
-  methods: {}
+  methods: {
+    tabRemove(tab) {
+      alert('remove' + tab.name);
+    }
+  }
 });
