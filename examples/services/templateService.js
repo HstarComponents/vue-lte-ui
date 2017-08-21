@@ -18,6 +18,8 @@ const baseTemplate = `
   </head>
   <body>
   {{htmlCode}}
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="//cdn.bootcss.com/vue/2.4.2/vue.js"></script>
   <script src="lib/vue-lte-ui.js"></script>
   <script>
