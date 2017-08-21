@@ -1,9 +1,9 @@
 <template>
   <ul class="lte-pagination pagination no-margin" :class="['pagination-' + size]">
     <li :class="{disabled: value <=1}" @click="setPageIndex(1, value <= 1)" v-if="!!firstText"><a href="javascript:;">{{firstText}}</a></li>
-    <li :class="{disabled: value <=1}" @click="setPageIndex(value - 1)"><a href="javascript:;">{{prevText}}</a></li>
+    <li :class="{disabled: value <=1}" @click="setPageIndex(value - 1)" v-if="!!prevText"><a href="javascript:;">{{prevText}}</a></li>
     <li v-for="p in pageItems" :class="{active: value === p.page}" @click="setPageIndex(p.page)"><a href="javascript:;">{{p.text}}</a></li>
-    <li :class="{disabled: value >= pageCount}" @click="setPageIndex(value + 1)"><a href="javascript:;">{{nextText}}</a></li>
+    <li :class="{disabled: value >= pageCount}" @click="setPageIndex(value + 1)" v-if="!!nextText"><a href="javascript:;">{{nextText}}</a></li>
     <li :class="{disabled: value >= pageCount}" @click="setPageIndex(pageCount, value >= pageCount)" v-if="!!lastText"><a href="javascript:;">{{lastText}}</a></li>
   </ul>
 </template>
