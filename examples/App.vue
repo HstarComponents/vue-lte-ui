@@ -26,13 +26,16 @@
     left: 230px;
     overflow-y: auto;
   }
-  .navbar-nav>.user-menu>.dropdown-menu{
+
+  .navbar-nav>.user-menu>.dropdown-menu {
     width: 500px;
   }
-  .navbar-nav>.user-menu>.dropdown-menu>li.user-header{
+
+  .navbar-nav>.user-menu>.dropdown-menu>li.user-header {
     height: auto;
   }
-  .navbar-nav>.user-menu>.dropdown-menu>li.user-header>img{
+
+  .navbar-nav>.user-menu>.dropdown-menu>li.user-header>img {
     width: calc(50% - 3px);
     height: auto;
   }
@@ -85,7 +88,7 @@
                     <span>{{m1.text}}</span>
                   </a>
                   <ul class="treeview-menu" style="display: block;">
-                    <li v-for="m2 in m1.children">
+                    <li v-for="m2 in m1.children" :class="{'active': m2.active}">
                       <router-link :to="m2.path"><i :class="m2.icon"></i> {{m2.text}}</router-link>
                     </li>
                   </ul>
@@ -128,17 +131,20 @@
       return {
         systemName: 'AdminLTE UI DEMO',
         menus: [], // 菜单
-        breadcrumbs: [] // 面包屑
+        breadcrumbs: [], // 面包屑
+        prevMenu: null
       }
     },
     created() {
       this._loadSystemMenus();
       this._setBreadcrumb(this.$route.path);
+      this._setSelectedMenu(this.$route.path);
     },
     watch: {
       $route(r) {
         eventBus.emit('route-change', r.path);
         this._setBreadcrumb(r.path);
+        this._setSelectedMenu(r.path);
       }
     },
     methods: {
@@ -150,6 +156,7 @@
       _processMenus(menus, parent) {
         menus.forEach(m => {
           m.$parent = parent;
+          m.active = false;
           m.hasChildren = m.children && m.children.length > 0;
           if (m.hasChildren) {
             this._processMenus(m.children, m);
@@ -167,6 +174,7 @@
       },
       _searchCurrentMenu(path, menus) {
         for (let m of menus) {
+          console.log(m.path, path, m.hasChildren);
           if (!m.hasChildren && m.path === path) {
             return m;
           }
@@ -178,6 +186,23 @@
           }
         }
         return null;
+      },
+      _setSelectedMenu(url) {
+        this._setMenuStatus(this.prevMenu, false);
+        let menu = this._searchCurrentMenu(url, this.menus);
+        if (menu) {
+          this.prevMenu = menu;
+          this._setMenuStatus(menu, true);
+        }
+      },
+      _setMenuStatus(menu, active) {
+        if (!menu) {
+          return;
+        }
+        menu.active = active;
+        if (menu.parent) {
+          this._setMenuStatus(menu.parent, active);
+        }
       }
     }
   };
